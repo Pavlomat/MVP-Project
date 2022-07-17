@@ -20,7 +20,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
-//        let mainVC = AssemblyModuleBuilder.createMainModule() можно закомментить тк мы запускаемся уже не напрямую через билдер
         let navigationController = UINavigationController()
         let assemblyBuilder = AssemblyModuleBuilder()
         let router = Router(navigationController: navigationController, assemblyBuilder: assemblyBuilder)
