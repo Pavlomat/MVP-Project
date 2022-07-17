@@ -12,13 +12,13 @@ protocol DetailViewProtocol: AnyObject {
 }
 
 protocol DetailViewPresenterProtocol: AnyObject {
-    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, comment: Comment) //networkService просто так добавили на случай если в детейл тоже нужно будет работать с интернетом
+    init(view: DetailViewProtocol, networkService: NetworkServiceProtocol, router: RouterProtocol, comment: Comment)
     func setComment()
     func tap()
 }
 
 class DetailPresenter: DetailViewPresenterProtocol {
-    weak var view: DetailViewProtocol?    // weak чтобы исбежать утечек памяти (всегда)
+    weak var view: DetailViewProtocol?
     var router: RouterProtocol?
     let networkService: NetworkServiceProtocol!
     var comment: Comment?
