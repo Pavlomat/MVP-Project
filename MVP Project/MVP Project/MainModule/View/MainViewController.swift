@@ -28,7 +28,7 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, MainVi
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         let comment = presenter.comments?[indexPath.row]
-        cell.textLabel?.text = comment?.name //эта штука будет отменена в ios 16 посотреть textlabel will be deprecated в гугле
+        cell.textLabel?.text = comment?.name
         return cell
     }
     
@@ -47,17 +47,3 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate, MainVi
         present(ac, animated: true)
     }
 }
-
-//extension MainViewController: MainViewProtocol {
-//    func success() {
-//        tableView.reloadData()
-//    }
-//
-//    func failure(error: Error) {
-//        let ac = UIAlertController(title: "Ошибка", message: error.localizedDescription, preferredStyle: .alert)
-//        ac.addAction(UIAlertAction(title: "Понятно", style: .cancel))
-//        present(ac, animated: true)
-//    }
-//
-//
-//}
