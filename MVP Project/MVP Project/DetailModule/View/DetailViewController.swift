@@ -27,10 +27,3 @@ class DetailViewController: UIViewController, DetailViewProtocol {
     }
 }
 
-//extension DetailViewController: DetailViewProtocol {
-//    func setComment(comment: Comment?) {
-//        commentLabel.text = comment?.body
-//    }
-//
-//}
-
