@@ -7,18 +7,18 @@
 
 import UIKit
 
-protocol RouterMain { //для работы со всеми контроллерами
+protocol RouterMain {
     var navigationController: UINavigationController? { get set }
     var assemblyBuilder: AssemblyBuilderProtocol? { get set }
 }
 
-protocol RouterProtocol: RouterMain { //для определенного контроллера
+protocol RouterProtocol: RouterMain {
     func initialViewController()
     func showDetail(comment: Comment?)
-    func popToRoot() //метод позволяет вернуться из показанного ВК в предыдущий ВК (рутовый/корневой)
+    func popToRoot()
 }
 
-class Router: RouterProtocol { //главная функция этого роутера - тестирование
+class Router: RouterProtocol {
     var navigationController: UINavigationController?
     var assemblyBuilder: AssemblyBuilderProtocol?
     
